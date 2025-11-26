@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweety Chat Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="chat-container" class="rounded-3xl shadow-2xl">
+        
+        <div class="chat-header text-center">
+            <h1 class="text-3xl">Sweety ✨ Companion</h1>
+            <p class="text-sm font-light italic">Your kind, cheerful, and encouraging AI friend.</p>
+        </div>
+
+        <div id="messages" class="flex flex-col space-y-3">
+            <div class="sweety-message message-bubble self-start">
+                <p class="font-semibold text-pink-600">Sweety</p>
+                <p>Hello there, sweetheart! 🥰 I'm Sweety, and I'm so excited to chat with you! What wonderful things are on your mind today? ✨</p>
+            </div>
+        </div>
+
+        <div id="input-area">
+            <div class="flex space-x-2">
+                <input type="text" id="user-input" placeholder="Say something sweet..."
+                       class="flex-grow p-3 border border-pink-300 rounded-full focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-150">
+                <button id="send-button" onclick="sendMessage()"
+                        class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full transition duration-150 shadow-md flex items-center justify-center disabled:opacity-50" disabled>
+                    <span id="button-text">Send</span>
+                    <div id="loading-spinner" class="hidden spinner"></div>
+                </button>
+            </div>
+            <p id="error-message" class="text-red-500 text-xs mt-2 hidden">An error occurred. Please try again.</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
