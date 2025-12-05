@@ -124,3 +124,4 @@ userInput.addEventListener('input', function() {
 
 setLoading(false);
 sendButton.disabled = true;
+
